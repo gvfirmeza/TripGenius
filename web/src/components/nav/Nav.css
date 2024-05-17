@@ -1,0 +1,27 @@
+.nav{
+    display: flex;
+    justify-content: center;
+    background-color: #191919;
+}
+
+.nav-lista {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    height: 70px;
+    list-style: none;
+    padding-right: 55px;
+}
+
+.nav-logo {
+    width: 200px;
+}
+
+.nav-link {
+    font-size: 16px;
+    background-color: #2E7CD1;
+    padding: 6px 15px;
+    border-radius: 15px;
+}
