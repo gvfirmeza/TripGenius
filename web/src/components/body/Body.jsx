@@ -1,10 +1,12 @@
 import React from "react";
 import "./Body.css";
 import Aviao from "./aviao.jpg";
+import Aventureira from "./aventureira.svg";
 
 const Body = () => {
   return (
     <body>
+
       <section className="section1">
         <container className="container">
           <div className="div-esq">
@@ -16,17 +18,36 @@ const Body = () => {
               oferecemos roteiros personalizados que transformam suas
               preferências em experiências únicas.
             </p>
-            <a href="#" className="link">Comece Já</a>
+            <a href="#a" className="link">Comece Já</a>
           </div>
           <div>
-            <img className="img" src={Aviao}/>
+            <img className="img" alt="aviao" src={Aviao} />
           </div>
         </container>
       </section>
 
-      <section className="section2"></section>
+      <section className="section2">
+        <container className="container">
+          <div>
+            <img className="img" alt="aventureira" src={Aventureira} />
+          </div>
+          <div className="div-dir">
+            <h1>Vantagens do Nosso Aplicativo</h1>
+            <p>
+              Explore um novo horizonte em suas viagens com nosso aplicativo. Descubra como tornamos o planejamento de viagens simples, intuitivo e adaptado às suas preferências.
+            </p>
+            <ul className="features">
+              <li>Planejamento de viagens personalizado</li>
+              <li>Experiências únicas e inesquecíveis</li>
+              <li>Inteligência artificial avançada</li>
+              <li>Aplicativo intuitivo e fácil de usar</li>
+            </ul>
+          </div>
+        </container>
+      </section>
 
       <section className="section1"></section>
+
     </body>
   );
 };
