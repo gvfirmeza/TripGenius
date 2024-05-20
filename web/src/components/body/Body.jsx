@@ -68,7 +68,7 @@ const Body = () => {
             </a>
           </div>
           <div>
-            <img className="img" alt="aviao" src={Hiker} />
+            <img className="img2" alt="aviao" src={Hiker} />
           </div>
         </container>
       </section>
