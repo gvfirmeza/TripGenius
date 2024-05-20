@@ -1,4 +1,4 @@
-.nav{
+.nav {
     display: flex;
     justify-content: center;
     background-color: #191919;
@@ -19,9 +19,16 @@
     width: 200px;
 }
 
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
 .nav-link {
     font-size: 16px;
     background-color: #2E7CD1;
     padding: 6px 15px;
     border-radius: 15px;
+    color: white;
+    text-decoration: none;
 }

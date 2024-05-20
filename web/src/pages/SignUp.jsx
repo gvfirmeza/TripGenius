@@ -1,17 +1,17 @@
 import React from 'react';
-import Body from '../components/body/Body';
 import Nav from '../components/nav/Nav';
 import Footer from '../components/footer/Footer';
+import SignUpForm from '../components/signupForm/SignUpForm';
 import "../App.css";
 
-function Landing() {
+function SignUp() {
     return (
         <div>
             <Nav />
-            <Body />
+            <SignUpForm />
             <Footer />
         </div>
     );
 }
 
-export default Landing;
+export default SignUp;

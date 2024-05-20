@@ -1,8 +1,9 @@
 import React from "react";
-import "./Body.css";
+import { Link } from "react-router-dom";
 import Aviao from "./aviao.jpg";
 import Aventureira from "./aventureira.svg";
 import Hiker from "./hiker.jpeg";
+import "./Body.css";
 
 const Body = () => {
   return (
@@ -18,9 +19,9 @@ const Body = () => {
               oferecemos roteiros personalizados que transformam suas
               preferências em experiências únicas.
             </p>
-            <a href="#a" className="link">
+            <Link to="/signup" className="link">
               Comece Já
-            </a>
+            </Link>
           </div>
           <div>
             <img className="img" alt="aviao" src={Aviao} />

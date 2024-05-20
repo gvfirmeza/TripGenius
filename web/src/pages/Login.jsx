@@ -1,17 +1,17 @@
 import React from 'react';
-import Body from '../components/body/Body';
 import Nav from '../components/nav/Nav';
 import Footer from '../components/footer/Footer';
+import LoginForm from '../components/loginForm/LoginForm';
 import "../App.css";
 
-function Landing() {
+function Login() {
     return (
         <div>
             <Nav />
-            <Body />
+            <LoginForm />
             <Footer />
         </div>
     );
 }
 
-export default Landing;
+export default Login;
