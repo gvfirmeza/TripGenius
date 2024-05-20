@@ -13,6 +13,7 @@
     justify-content: center;
     align-items: center;
     height: 70vh;
+    margin: auto;
 }
 
 .div-esq {
@@ -66,11 +67,12 @@
 
 .features li {
     position: relative;
+    margin-bottom: 0.3em;
     padding-left: 1.5em;
 }
 
 .features li::before {
-    content: ">";
+    content: "➥";
     position: absolute;
     left: 0;
     color: #2E7CD1;
