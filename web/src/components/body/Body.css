@@ -55,6 +55,12 @@
     color: #ffff;
 }
 
+.saiba{
+    margin-left: 1em;
+    text-decoration: none;
+    color: #ffff;
+}
+
 .img {
     width: 420px;
     border-radius: 15px;
@@ -75,5 +81,9 @@
     content: "➥";
     position: absolute;
     left: 0;
+    color: #2E7CD1;
+}
+
+span {
     color: #2E7CD1;
 }
