@@ -2,11 +2,11 @@ import React from "react";
 import "./Body.css";
 import Aviao from "./aviao.jpg";
 import Aventureira from "./aventureira.svg";
+import Hiker from "./hiker.jpeg";
 
 const Body = () => {
   return (
     <body>
-
       <section className="section1">
         <container className="container">
           <div className="div-esq">
@@ -18,7 +18,9 @@ const Body = () => {
               oferecemos roteiros personalizados que transformam suas
               preferências em experiências únicas.
             </p>
-            <a href="#a" className="link">Comece Já</a>
+            <a href="#a" className="link">
+              Comece Já
+            </a>
           </div>
           <div>
             <img className="img" alt="aviao" src={Aviao} />
@@ -34,7 +36,9 @@ const Body = () => {
           <div className="div-dir">
             <h1>Vantagens do Nosso Aplicativo</h1>
             <p>
-              Explore um novo horizonte em suas viagens com nosso aplicativo. Descubra como tornamos o planejamento de viagens simples, intuitivo e adaptado às suas preferências.
+              Explore um novo horizonte em suas viagens com nosso aplicativo.
+              Descubra como tornamos o planejamento de viagens simples,
+              intuitivo e adaptado às suas preferências.
             </p>
             <ul className="features">
               <li>Planejamento de viagens personalizado</li>
@@ -46,8 +50,28 @@ const Body = () => {
         </container>
       </section>
 
-      <section className="section1"></section>
-
+      <section className="section1">
+        <container className="container">
+          <div className="div-esq">
+            <h1>Inscreva-se Já e <br /> <span>Viaje Sem Limites!</span></h1>
+            <p>
+              Assine agora e mergulhe em roteiros personalizados ilimitados que
+              transformam suas viagens em experiências inesquecíveis. Seja o
+              protagonista de cada jornada, com acesso exclusivo a aventuras
+              feitas sob medida para você.
+            </p>
+            <a href="#a" className="link">
+              Comece Grátis
+            </a>
+            <a href="#a" className="saiba">
+              ▸ Saiba Mais
+            </a>
+          </div>
+          <div>
+            <img className="img" alt="aviao" src={Hiker} />
+          </div>
+        </container>
+      </section>
     </body>
   );
 };
