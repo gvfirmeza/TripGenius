@@ -61,12 +61,12 @@ const Body = () => {
               protagonista de cada jornada, com acesso exclusivo a aventuras
               feitas sob medida para você.
             </p>
-            <a href="#a" className="link">
+            <Link to="/signup" className="link">
               Comece Grátis
-            </a>
-            <a href="#a" className="saiba">
+            </Link>
+            <Link to="/plans" className="saiba">
               ▸ Saiba Mais
-            </a>
+            </Link>
           </div>
           <div>
             <img className="img2" alt="aviao" src={Hiker} />
