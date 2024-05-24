@@ -22,12 +22,8 @@ const TripForm = () => {
             <input className='input' type="text" value={destination} onChange={e => setDestination(e.target.value)} />
           </label>
           <label className='label'>
-            Data Inicial:
-            <input className='input' type="date" value={startDate} onChange={e => setStartDate(e.target.value)} />
-          </label>
-          <label className='label'>
-            Data Final:
-            <input className='input' type="date" value={endDate} onChange={e => setEndDate(e.target.value)} />
+            Duração da Viagem:
+            <input className='input' placeholder="Dias" type="number" value={startDate} onChange={e => setStartDate(e.target.value)} />
           </label>
           <button className='button' type="submit">Enviar</button>
         </form>
