@@ -6,11 +6,12 @@ import Landing from './pages/Landing';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Planos from './pages/Planos';
+import PageForm from './pages/Form';
 import './index.css';
 
 
 const rotas = createBrowserRouter([
-  
+
   {
     path: "/",
     element: <Landing />
@@ -26,8 +27,11 @@ const rotas = createBrowserRouter([
   {
     path: "/plans",
     element: <Planos />
+  },
+  {
+    path: "/form",
+    element: <PageForm />
   }
-
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

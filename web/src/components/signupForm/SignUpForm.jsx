@@ -21,7 +21,7 @@ function SignUpForm() {
         <input className='input' type="email" value={email} onChange={e => setEmail(e.target.value)} />
       </label>
       <label className='label'>
-        Usuário:
+        Nome:
         <input className='input' type="text" value={username} onChange={e => setUsername(e.target.value)} />
       </label>
       <label className='label'>
