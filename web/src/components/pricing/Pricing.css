@@ -1,12 +1,16 @@
-.section-price {
+.div-prices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 80vh;
   color: #191919;
 }
 
-.hagaum{
-  color: white;
-  margin-bottom: 2.2em;
-  margin-top: 0;
+.hagaum {
+  margin-bottom: 2em;
+  margin-top: -1em;
+  text-align: center;
 }
 
 .pricing {
@@ -14,7 +18,8 @@
   justify-content: center;
   align-items: center;
   isolation: isolate;
-margin-bottom: 2em;
+  margin-bottom: 2em;
+  width: 100%;
 }
 
 @media (max-width: 540px) {

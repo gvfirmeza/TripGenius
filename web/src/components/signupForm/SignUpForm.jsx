@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './SignUpForm.css';
 
@@ -6,12 +7,14 @@ function SignUpForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     const params = new URLSearchParams();
     params.append('username', username);
+
     params.append('password', password);
     params.append('email', email);
 
@@ -23,6 +26,7 @@ function SignUpForm() {
       });
 
       alert(response.data.message);
+      navigate('/login');
     } catch (error) {
       alert(error.response?.data?.message || 'An error occurred');
     }

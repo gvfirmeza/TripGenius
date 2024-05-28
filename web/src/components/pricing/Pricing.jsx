@@ -1,9 +1,17 @@
 import React from 'react';
 import './Pricing.css';
+import { useNavigate } from 'react-router-dom';
 
 const Pricing = () => {
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/signup');
+  };
+
   return (
-    <div className='section-price'>
+    <div className='div-prices'>
       <h1 className='hagaum'>Nossos Planos</h1>
       <section className="pricing">
         <article className="card">
@@ -16,7 +24,7 @@ const Pricing = () => {
             <li>Sem Armazenamento</li>
             <li>Sem suporte</li>
           </ul>
-          <button>Assine Já</button>
+          <button onClick={handleClick}>Assine Já</button>
         </article>
 
         <article className="primary card">
@@ -29,7 +37,7 @@ const Pricing = () => {
             <li>Histórico de Preferências</li>
             <li>Suporte por e-mail</li>
           </ul>
-          <button>Assine Já</button>
+          <button onClick={handleClick}>Assine Já</button>
         </article>
 
         <article className="card">
@@ -40,7 +48,7 @@ const Pricing = () => {
             <li>Roteiros e Armazenamento ilimitados.</li>
             <li>Suporte dedicado por telefone</li>
           </ul>
-          <button>Assine Já</button>
+          <button onClick={handleClick}>Assine Já</button>
         </article>
       </section>
     </div>
