@@ -1,4 +1,4 @@
-# TripGenius
+# Trip2Me
 
 ## Nosso App:
 
@@ -8,13 +8,15 @@ Nosso aplicativo revoluciona a forma como você planeja suas viagens. Combinando
 
 1. **Formulário de Viagens:**
     - Permitir que os usuários preencham informações sobre sua viagem, como destino desejado, datas de partida e retorno, preferências de atividades, orçamento estimado, entre outros detalhes relevantes.
-2. **Integração com a API do GPT:**
+2. **Realidade Aumentada:**
+   - Disponibilizar recursos de realidade aumentada de locais/pontos turísticos específicos.
+3. **Integração com a API do GPT:**
     - Conectar o aplicativo à API do GPT para processar as informações do formulário e gerar um roteiro de viagem personalizado.
-3. **Exibição do Roteiro:**
+4. **Exibição do Roteiro:**
     - Mostrar ao usuário o roteiro de viagem gerado pela API, incluindo detalhes como pontos turísticos a visitar, atividades sugeridas, opções de hospedagem e transporte, estimativa de custos, etc.
-4. **Personalização do Roteiro:**
+5. **Personalização do Roteiro:**
     - Permitir que o usuário personalize o roteiro gerado, adicionando ou removendo atividades, ajustando datas e horários, selecionando opções de hospedagem e transporte, conforme sua preferência.
-5. **Cadastro e Login de Usuários:**
+6. **Cadastro e Login de Usuários:**
     - Implementar um sistema de cadastro e login para que os usuários possam salvar seus roteiros, visualizar histórico de viagens, e receber recomendações personalizadas com base em suas preferências anteriores.
 
 ## **Requisitos Não Funcionais:**
