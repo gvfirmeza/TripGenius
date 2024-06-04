@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Aviao from "./aviao.jpg";
+import viagem from "./viagem.jpg";
 import Aventureira from "./aventureira.svg";
 import Hiker from "./hiker.jpeg";
 import "./Body.css";
@@ -24,7 +24,7 @@ const Body = () => {
             </Link>
           </div>
           <div>
-            <img className="img" alt="aviao" src={Aviao} />
+            <img className="img" alt="viagem" src={viagem} />
           </div>
         </container>
       </section>
@@ -35,7 +35,7 @@ const Body = () => {
             <img className="img" alt="aventureira" src={Aventureira} />
           </div>
           <div className="div-dir">
-            <h1>Vantagens do Nosso Aplicativo</h1>
+            <h1 className="vantagens-body">Vantagens do Nosso Aplicativo</h1>
             <p>
               Explore um novo horizonte em suas viagens com nosso aplicativo.
               Descubra como tornamos o planejamento de viagens simples,
@@ -46,6 +46,7 @@ const Body = () => {
               <li>Experiências únicas e inesquecíveis</li>
               <li>Inteligência artificial avançada</li>
               <li>Aplicativo intuitivo e fácil de usar</li>
+              <li>Realidade aumentada</li>
             </ul>
           </div>
         </container>
@@ -64,9 +65,9 @@ const Body = () => {
             <Link to="/signup" className="link">
               Comece Grátis
             </Link>
-            <Link to="/plans" className="saiba">
+            {/* <Link to="/plans" className="saiba">
               ▸ Saiba Mais
-            </Link>
+            </Link> */}
           </div>
           <div>
             <img className="img2" alt="aviao" src={Hiker} />

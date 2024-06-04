@@ -7,7 +7,7 @@ const Footer = () => {
       <div className='footer-div'>
       <hr className="footer-divider" />
       <div className="footer-content">
-        <p>© 2024 Trip Genius. Todos os direitos reservados.</p>
+        <p>© 2024 Trip2Me. Todos os direitos reservados.</p>
       </div>
       </div>
     </footer>

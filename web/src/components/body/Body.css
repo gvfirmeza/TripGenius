@@ -1,6 +1,6 @@
 .section1 {
     display: flex;
-    background-color: #292d31;
+    background-color: #073064;
     color: #ffff;
 }
 
@@ -53,6 +53,12 @@
     border-radius: 15px;
     text-decoration: none;
     color: #ffff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.link:hover {
+    background-color: #f88832;
+    color: #fff;
 }
 
 .saiba{
@@ -64,11 +70,13 @@
 .img {
     width: 420px;
     border-radius: 15px;
+    border: solid 1px #ffffff;
 }
 
 .img2 {
     width: 500px;
     border-radius: 15px;
+    border: solid 1px #ffffff;
 }
 
 .features {
@@ -90,5 +98,9 @@
 }
 
 span {
-    color: #2E7CD1;
+    color: #f88832;
+}
+
+.vantagens-body {
+    color: #073064;
 }
