@@ -131,5 +131,3 @@ Nosso aplicativo revoluciona a forma como você planeja suas viagens. Combinando
 **Pós-condições:**
 
 - O usuário está autenticado e pode acessar funcionalidades personalizadas e salvar seus roteiros.
-
-[flask](https://www.notion.so/flask-cfee4983296045e78a797cc79e0b1f21?pvs=21)
