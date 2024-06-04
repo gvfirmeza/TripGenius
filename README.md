@@ -93,27 +93,7 @@ Nosso aplicativo revoluciona a forma como você planeja suas viagens. Combinando
 
 - O usuário visualiza o roteiro e pode optar por personalizá-lo ou salvá-lo.
 
-### **Caso de Uso 4: Personalização do Roteiro**
-
-**Ator Principal:** Usuário
-
-**Pré-condições:**
-
-- O usuário visualizou o roteiro gerado pelo sistema.
-
-**Fluxo Principal:**
-
-1. O usuário seleciona a opção de personalizar o roteiro.
-2. O sistema permite que o usuário adicione ou remova atividades, ajuste datas e horários, e selecione opções de hospedagem e transporte.
-3. O usuário faz as alterações desejadas.
-4. O usuário salva as alterações.
-5. O sistema atualiza o roteiro com as personalizações do usuário.
-
-**Pós-condições:**
-
-- O roteiro de viagem é personalizado conforme as preferências do usuário.
-
-### **Caso de Uso 5: Cadastro e Login de Usuários**
+### **Caso de Uso 4: Cadastro e Login de Usuários**
 
 **Ator Principal:** Usuário
 
