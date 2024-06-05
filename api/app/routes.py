@@ -1,7 +1,7 @@
 from flask import request, jsonify
 from . import db
 from .models import User
-from . import create_app
+import google.generativeai as genai
 
 def init_routes(app):
 
@@ -35,3 +35,16 @@ def init_routes(app):
         db.session.add(new_user)
         db.session.commit()
         return jsonify({"message": "User created successfully"}), 201
+
+    @app.route('/generate_response', methods=['POST'])
+    def generate_response():
+
+        genai.configure(api_key="AIzaSyBWTnGlT6hdGKu50IHaYP8-MgiSlKCWS-k")
+
+        model = genai.GenerativeModel('gemini-1.5-flash')
+
+        data = request.get_json()
+        prompt = data.get('prompt', 'Crie um roteiro de viagem...')
+        
+        response = model.generate_content(prompt)
+        return jsonify({"text": response.text}), 200

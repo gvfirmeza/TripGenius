@@ -6,6 +6,7 @@
     justify-content: center;
     height: 80vh;
     background-color: #073064;
+
 }
 
 .form-title{
@@ -13,4 +14,23 @@
     font-size: 1.8rem;
     margin-top: 0;
     margin-bottom: 0.5em;
+}
+
+.passenger {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.remove-button {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.remove-button:hover {
+    color: darkred;
 }
