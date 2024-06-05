@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     height: 80vh;
-    background-color: #292d31;
+    background-color: #073064;
 }
 
 .title{
@@ -33,7 +33,7 @@
     width: 100%;
     height: 2rem;
     margin-bottom: 1em;
-    background-color: #292d31;
+    background-color: #073064;
     border: 1px solid #d4d4d4;
     border-radius: 2px;
     color: white;
@@ -50,4 +50,10 @@
     border-radius: 4px;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover{
+    background-color: #f88832;
+    color: #fff;
 }
