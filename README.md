@@ -85,13 +85,13 @@ Nosso aplicativo revoluciona a forma como você planeja suas viagens. Combinando
 
 **Fluxo Principal:**
 
-1. O usuário acessa a página de visualização do roteiro.
-2. O sistema exibe o roteiro de viagem, incluindo pontos turísticos, atividades, hospedagem, transporte e estimativas de custos.
+1. O pop-up de download aparece na tela do usuário.
+2. O usuario faz o download do roteiro de viagem, incluindo pontos turísticos, atividades, hospedagem, transporte e estimativas de custos.
 3. O usuário revisa o roteiro.
 
 **Pós-condições:**
 
-- O usuário visualiza o roteiro e pode optar por personalizá-lo ou salvá-lo.
+- O usuário visualiza o roteiro e pode optar por salvá-lo.
 
 ### **Caso de Uso 4: Cadastro e Login de Usuários**
 
