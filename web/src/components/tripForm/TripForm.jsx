@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import MarkdownIt from 'markdown-it';
+import html2pdf from 'html2pdf.js';
 import "./TripForm.css";
 
 const TripForm = () => {
@@ -7,10 +9,52 @@ const TripForm = () => {
     const [season, setSeason] = useState('');
     const [budget, setBudget] = useState('');
     const [passengers, setPassengers] = useState([{ gender: '', age: '' }]);
+    const [loading, setLoading] = useState(false);
+    const [response, setResponse] = useState(null);
+    const [error, setError] = useState(null);
 
-    const handleSubmit = (e) => {
+    useEffect(() => {
+        if (response) {
+            downloadFile();
+            setLoading(false);
+        }
+    }, [response]);
+
+    useEffect(() => {
+        if (error) {
+            const timer = setTimeout(() => {
+                setError(null);
+            }, 2000);
+            return () => clearTimeout(timer);
+        }
+    }, [error]);
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Dados do formulário:', { destination, duration, season, budget, passengers });
+        setLoading(true);
+        setError(null);
+
+        const data = {
+            prompt: `Gostaria de criar um roteiro de viagem, eu vou para ${destination}, ficarei ${duration} dias, a estação será ${season} e meu orçamento é ${budget}. Os passageiros serão: ${passengers.map(p => `${p.gender}, ${p.age} anos`).join(', ')}.`
+        };
+
+        try {
+            const res = await fetch('http://127.0.0.1:5000/generate_response', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            if (!res.ok) {
+                throw new Error('Erro na requisição');
+            }
+
+            const result = await res.json();
+            setResponse(result.text);
+        } catch (err) {
+            setError('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');
+            setLoading(false);
+        }
     };
 
     const handlePassengerChange = (index, field, value) => {
@@ -28,8 +72,30 @@ const TripForm = () => {
         setPassengers(updatedPassengers);
     };
 
+    const downloadFile = () => {
+        const md = new MarkdownIt();
+        const htmlContent = md.render(response);
+
+        const element = document.createElement("div");
+        element.innerHTML = htmlContent;
+        element.style.fontSize = '16px'; // Ajuste o tamanho da fonte aqui
+        element.style.margin = '20px'; // Ajuste as margens aqui
+
+        const options = {
+            margin: 1,
+            filename: 'roteiro_viagem.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+
+        html2pdf().set(options).from(element).save();
+    };
+
     return (
         <section className="section-form">
+            {loading && <div className="popup">Loading...</div>}
+            {error && <div className="popup">{error}</div>}
             <form className="form" onSubmit={handleSubmit}>
                 <h1 className="form-title">Crie Seu Roteiro</h1>
                 <p>Preencha o Formulário abaixo para criarmos seu roteiro.</p>
@@ -41,6 +107,7 @@ const TripForm = () => {
                         type="text"
                         value={destination}
                         onChange={e => setDestination(e.target.value)}
+                        required
                     />
                 </label>
 
@@ -51,6 +118,7 @@ const TripForm = () => {
                         type="number"
                         value={duration}
                         onChange={e => setDuration(e.target.value)}
+                        required
                     />
                 </label>
 
@@ -60,6 +128,7 @@ const TripForm = () => {
                         className="input"
                         value={season}
                         onChange={e => setSeason(e.target.value)}
+                        required
                     >
                         <option value="">Selecione</option>
                         <option value="Verão">Verão</option>
@@ -75,6 +144,7 @@ const TripForm = () => {
                         className="input"
                         value={budget}
                         onChange={e => setBudget(e.target.value)}
+                        required
                     >
                         <option value="">Selecione</option>
                         <option value="Baixo">Baixo</option>
@@ -92,6 +162,7 @@ const TripForm = () => {
                                 className="input"
                                 value={passenger.gender}
                                 onChange={e => handlePassengerChange(index, 'gender', e.target.value)}
+                                required
                             >
                                 <option value="">Selecione</option>
                                 <option value="Masculino">Masculino</option>
@@ -107,6 +178,7 @@ const TripForm = () => {
                                 type="number"
                                 value={passenger.age}
                                 onChange={e => handlePassengerChange(index, 'age', e.target.value)}
+                                required
                             />
                         </label>
 
