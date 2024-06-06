@@ -19,7 +19,7 @@ function SignUpForm() {
     params.append('email', email);
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/signup', params, {
+      const response = await axios.post('https://vgt.pythonanywhere.com/signup', params, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         }
@@ -28,7 +28,7 @@ function SignUpForm() {
       alert(response.data.message);
       navigate('/login');
     } catch (error) {
-      alert(error.response?.data?.message || 'An error occurred');
+      alert(error.response?.data?.message || 'Ocorreu um erro');
     }
   };
 

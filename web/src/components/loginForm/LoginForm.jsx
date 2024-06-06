@@ -16,7 +16,7 @@ function LoginForm() {
     params.append('password', password);
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/login', params, {
+      const response = await axios.post('https://vgt.pythonanywhere.com/login', params, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         }
@@ -25,7 +25,7 @@ function LoginForm() {
       alert(response.data.message);
       navigate('/form');
     } catch (error) {
-      alert(error.response?.data?.message || 'An error occurred');
+      alert(error.response?.data?.message || 'Ocorreu um erro');
     }
   };
 

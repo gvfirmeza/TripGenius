@@ -39,7 +39,7 @@ const TripForm = () => {
         };
 
         try {
-            const res = await fetch('http://127.0.0.1:5000/generate_response', {
+            const res = await fetch('https://vgt.pythonanywhere.com/generate_response', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
@@ -78,8 +78,8 @@ const TripForm = () => {
 
         const element = document.createElement("div");
         element.innerHTML = htmlContent;
-        element.style.fontSize = '16px'; // Ajuste o tamanho da fonte aqui
-        element.style.margin = '20px'; // Ajuste as margens aqui
+        element.style.fontSize = '16px';
+        element.style.margin = '18px';
 
         const options = {
             margin: 1,
@@ -156,6 +156,7 @@ const TripForm = () => {
                 <h2>Passageiros</h2>
                 {passengers.map((passenger, index) => (
                     <div key={index} className="passenger">
+
                         <label className="label">
                             Gênero:
                             <select
@@ -171,6 +172,7 @@ const TripForm = () => {
                             </select>
                         </label>
 
+                        <div className='inputPassenger'>
                         <label className="label">
                             Idade:
                             <input
@@ -181,6 +183,7 @@ const TripForm = () => {
                                 required
                             />
                         </label>
+                        </div>
 
                         <button
                             type="button"
