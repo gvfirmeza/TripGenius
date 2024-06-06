@@ -30,8 +30,6 @@ Nosso aplicativo revoluciona a forma como você planeja suas viagens. Combinando
 5. **Escalabilidade e Manutenibilidade:**
     - Projetar o aplicativo de forma escalável para lidar com um aumento no número de usuários e viagens cadastradas, além de garantir uma fácil manutenção e atualização do sistema no futuro.
 
-## **Casos de Uso:**
-
 ### **Caso de Uso 1: Preenchimento do Formulário de Viagens**
 
 **Ator Principal:** Usuário
