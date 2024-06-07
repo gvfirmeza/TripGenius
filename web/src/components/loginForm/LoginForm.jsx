@@ -35,11 +35,11 @@ function LoginForm() {
         <h1 className="title">Login</h1>
         <label className='label'>
           Usuário:
-          <input className='input' type="text" value={username} onChange={e => setUsername(e.target.value)} />
+          <input className='input' type="text" value={username} onChange={e => setUsername(e.target.value)} required />
         </label>
         <label className='label'>
           Senha:
-          <input className='input' type="password" value={password} onChange={e => setPassword(e.target.value)} />
+          <input className='input' type="password" value={password} onChange={e => setPassword(e.target.value)} required />
         </label>
         <button className='button' type="submit">Enviar</button>
       </form>

@@ -14,7 +14,6 @@ function SignUpForm() {
 
     const params = new URLSearchParams();
     params.append('username', username);
-
     params.append('password', password);
     params.append('email', email);
 
@@ -38,15 +37,15 @@ function SignUpForm() {
         <h1 className="title">Inscreva-Se</h1>
         <label className='label'>
           Email:
-          <input className='input' type="email" value={email} onChange={e => setEmail(e.target.value)} />
+          <input className='input' type="email" value={email} onChange={e => setEmail(e.target.value)} required />
         </label>
         <label className='label'>
           Nome:
-          <input className='input' type="text" value={username} onChange={e => setUsername(e.target.value)} />
+          <input className='input' type="text" value={username} onChange={e => setUsername(e.target.value)} required />
         </label>
         <label className='label'>
           Senha:
-          <input className='input' type="password" value={password} onChange={e => setPassword(e.target.value)} />
+          <input className='input' type="password" value={password} onChange={e => setPassword(e.target.value)} required />
         </label>
         <button className='button' type="submit">Enviar</button>
       </form>
