@@ -8,8 +8,8 @@ Nosso aplicativo revoluciona a forma como você planeja suas viagens. Combinando
 
 1. **Formulário de Viagens:**
     - Permitir que os usuários preencham informações sobre sua viagem, como destino desejado, datas de partida e retorno, preferências de atividades, orçamento estimado, entre outros detalhes relevantes.
-2. **Integração com a API do GPT:**
-    - Conectar o aplicativo à API do GPT para processar as informações do formulário e gerar um roteiro de viagem personalizado.
+2. **Integração com a API:**
+    - Conectar o aplicativo à API para processar as informações do formulário e gerar um roteiro de viagem personalizado.
 3. **Exibição do Roteiro:**
     - Mostrar ao usuário o roteiro de viagem gerado pela API, incluindo detalhes como pontos turísticos a visitar, atividades sugeridas, opções de hospedagem e transporte, estimativa de custos, etc.
 4. **Personalização do Roteiro:**
@@ -46,7 +46,7 @@ Nosso aplicativo revoluciona a forma como você planeja suas viagens. Combinando
 2. O sistema exibe um formulário solicitando detalhes da viagem (destino, datas, preferências, orçamento, etc.).
 3. O usuário preenche todas as informações solicitadas.
 4. O usuário envia o formulário.
-5. O sistema confirma o recebimento das informações e inicia o processamento com a API do GPT.
+5. O sistema confirma o recebimento das informações e inicia o processamento com a API.
 
 **Fluxos Alternativos:**
 
@@ -66,8 +66,8 @@ Nosso aplicativo revoluciona a forma como você planeja suas viagens. Combinando
 
 **Fluxo Principal:**
 
-1. O sistema envia as informações do formulário para a API do GPT.
-2. A API do GPT processa as informações e gera um roteiro de viagem personalizado.
+1. O sistema envia as informações do formulário para a API.
+2. A API processa as informações e gera um roteiro de viagem personalizado.
 3. O sistema recebe o roteiro gerado pela API.
 4. O sistema salva o roteiro no perfil do usuário.
 
