@@ -1,3 +1,10 @@
+.page-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .section1 {
     display: flex;
     background-color: #292d31;
@@ -93,6 +100,6 @@
     color: #2E7CD1;
 }
 
-span {
+/* span {
     color: #2E7CD1;
-}
+} */
