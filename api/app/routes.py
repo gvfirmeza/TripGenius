@@ -6,8 +6,7 @@ import jwt
 import datetime
 from functools import wraps
 
-# Configure JWT secret key
-SECRET_KEY = "your_secret_key"
+SECRET_KEY = "rafa_rsi_rafa_rsi"
 
 def token_required(f):
     @wraps(f)
@@ -85,12 +84,18 @@ def init_routes(app):
         data = request.get_json()
         prompt = data.get('prompt', 'Crie um roteiro de viagem...')
 
-        genai.configure(api_key="AIzaSyAPkahVrBQyZMsZPZVFDgV_uW7rtUoCoxs")
+        genai.configure(api_key="AIzaSyBWTnGlT6hdGKu50IHaYP8-MgiSlKCWS-k")
         model = genai.GenerativeModel('gemini-1.5-flash')
         
         response = model.generate_content(prompt)
 
+        # Deduct one credit
         current_user.credits -= 1
         db.session.commit()
 
         return jsonify({"text": response.text}), 200
+
+    @app.route('/get_credits', methods=['GET'])
+    @token_required
+    def get_credits(current_user):
+        return jsonify({"credits": current_user.credits}), 200
