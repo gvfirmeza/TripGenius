@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Aviao from "./aviao.jpg";
 import Aventureira from "./aventureira.svg";
@@ -6,13 +6,14 @@ import Hiker from "./hiker.jpeg";
 import "./Body.css";
 
 import { motion } from "framer-motion";
+import { ReactTyped } from 'react-typed';
 
 const Body = () => {
   const firstSectionTitle = "Planeje sua viagem de forma simples e intuitiva, sem complicações.".split(" ");
 
   const MotionSectionReveal = (props) => {
     const deslocation = 100;
-    
+
     return (
       <motion.div
         initial={{
@@ -23,7 +24,27 @@ const Body = () => {
           opacity: 1,
           x: 0,
           transition: {
-            duration: 1
+            duration: 1.5
+          }
+        }}
+        viewport={{ once: true }}
+      >
+        {props.children}
+      </motion.div>
+    );
+  };
+
+  const FadeSectionReveal = (props) => {
+
+    return (
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+          transition: {
+            duration: 2
           }
         }}
         viewport={{ once: true }}
@@ -34,45 +55,43 @@ const Body = () => {
   };
 
   return (
-    <body>
+    <div>
       <section className="page-section section1">
-        <MotionSectionReveal index={1}>
-          <container className="container">
-            <div className="div-esq">
-              <h1>
-                {firstSectionTitle.map((el, i) => (
-                  <motion.span
-                  initial={{opacity: 0}}
-                  animate={{opacity: 1}}
+        <div className="container">
+          <div className="div-esq">
+            <h1>
+              {firstSectionTitle.map((el, i) => (
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
                   transition={{
                     duration: 0.25,
-                    delay: i /10
+                    delay: i / 10
                   }}
                   key={i}
                 >
                   {el}{" "}
                 </motion.span>
-                ))}
-              </h1>
-              <p>
-                Combinando tecnologia avançada e inteligência artificial,
-                oferecemos roteiros personalizados que transformam suas
-                preferências em experiências únicas.
-              </p>
-              <Link to="/signup" className="link">
-                Comece Já
-              </Link>
-            </div>
-            <div>
-              <img className="img" alt="aviao" src={Aviao} />
-            </div>
-          </container>
-        </MotionSectionReveal>
-    </section>
+              ))}
+            </h1>
+            <p>
+              Combinando tecnologia avançada e inteligência artificial,
+              oferecemos roteiros personalizados que transformam suas
+              preferências em experiências únicas.
+            </p>
+            <Link to="/signup" className="link">
+              Comece Já
+            </Link>
+          </div>
+          <div>
+            <img className="img" alt="aviao" src={Aviao} />
+          </div>
+        </div>
+      </section>
 
       <section className="page-section section2">
-       <MotionSectionReveal index={2}>
-          <container className="container">
+        <MotionSectionReveal index={2}>
+          <div className="container">
             <div>
               <img className="img" alt="aventureira" src={Aventureira} />
             </div>
@@ -90,18 +109,27 @@ const Body = () => {
                 <li>Aplicativo intuitivo e fácil de usar</li>
               </ul>
             </div>
-          </container>
+          </div>
         </MotionSectionReveal>
       </section>
 
       <section className="page-section section1">
-        <MotionSectionReveal index={3}>
-          <container className="container">
+        <FadeSectionReveal>
+          <div className="container">
             <div className="div-esq">
-
-              {/* OBS: Mude o "viaje sem limites!" para cor azul. */}
-              
-              <h1>Inscreva-se Já e <br /> <span>Viaje Sem Limites!</span></h1>
+              <h1>Inscreva-se Já e <br />
+                <ReactTyped
+                  strings={[
+                    "Viaje Sem Limites!",
+                    "Explore Novos Horizontes!",
+                    "Viva Experiências Únicas!"
+                  ]}
+                  typeSpeed={80}
+                  backSpeed={40}
+                  loop
+                  className="span-b"
+                />
+              </h1>
               <p>
                 Assine agora e mergulhe em roteiros personalizados ilimitados que
                 transformam suas viagens em experiências inesquecíveis. Seja o
@@ -118,10 +146,10 @@ const Body = () => {
             <div>
               <img className="img2" alt="aviao" src={Hiker} />
             </div>
-          </container>
-        </MotionSectionReveal>
+          </div>
+        </FadeSectionReveal>
       </section>
-    </body>
+    </div>
   );
 };
 
